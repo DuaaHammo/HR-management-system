@@ -1,56 +1,51 @@
+"use strict";
 
+var id = 999;
 
-  "use strict";
-
-   //Q2 unique four digits
-  var id = 999
-
-
- function generateId(){
-   return ++id
- }
-
-//
- function getRandomSalary(level) {
-    let min, max;
-  
-    switch (level) {
-      case 'Senior':
-        min = 1500;
-        max = 2000;
-        break;
-      case 'Mid-Senior':
-        min = 1000;
-        max = 1500;
-        break;
-      case 'Junior':
-        min = 500;
-        max = 1000;
-        break;
-
-    }
-  
-    return getRandomInt(min, max);
-  }
-  function getRandomInt(min, max) {
-  
-    min = Math.ceil(min);
-    max = Math.floor(max);
-     
-    let salary= Math.floor(Math.random() * (max - min) + min); 
-    return calculateNetSalary(salary) 
+function generateId() {
+  return ++id;
 }
 
-  //Q4 (min*max) salary-(salary*7.5%):_
-  function calculateNetSalary(salary) {
-      const taxPercent = 7.5;
-      const taxAmount = (salary * taxPercent) / 100;
-      const netSalary = salary - taxAmount;
-      return Math.round(netSalary) ;
-    }
- 
-  // Q1 Create an object:
-  const employees = [
+//
+function getRandomSalary(level) {
+  let min, max;
+
+  switch (level) {
+    case 'Senior':
+      min = 1500;
+      max = 2000;
+      break;
+    case 'Mid-Senior':
+      min = 1000;
+      max = 1500;
+      break;
+    case 'Junior':
+      min = 500;
+      max = 1000;
+      break;
+  }
+
+  return getRandomInt(min, max);
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
+  let salary = Math.floor(Math.random() * (max - min) + min);
+  return calculateNetSalary(salary);
+}
+
+//Q4 (min*max) salary-(salary*7.5%):_
+function calculateNetSalary(salary) {
+  const taxPercent = 7.5;
+  const taxAmount = (salary * taxPercent) / 100;
+  const netSalary = salary - taxAmount;
+  return Math.round(netSalary);
+}
+
+    // Q1 Create an object:
+    const employees = [
       {
         imageURL: "./img/Ghazi.png",
         ID: generateId(),
@@ -108,10 +103,9 @@
         Salary: getRandomSalary("Mid-Senior"),
       },
     ];
-    
-    
+
     // Q5 Print employee details:
-      employees.forEach(function (employee) {
+    employees.forEach(function (employee) {
       console.log("Employee ID: " + employee.ID);
       console.log("imageURL: " + employee.imageURL);
       console.log("Full Name: " + employee.FullName);
@@ -120,65 +114,103 @@
       console.log("Salary: " + employee.Salary);
     });
 
-    //tabel
+    // Function to display employee details
+    function displayEmployees(employees) {
+      const employeeList = document.getElementById('employee-list');
 
-    console.table(employees);
+      employees.forEach(function (employee) {
+        const employeeCard = document.createElement('div');
+        employeeCard.classList.add('employee-card');
 
+        const employeeImage = document.createElement('div');
+        employeeImage.classList.add('employee-image');
 
-// Function to display employee details
+        const imageElement = document.createElement('img');
+        imageElement.src = employee.imageURL;
+        imageElement.alt = 'Employee Image';
+        imageElement.classList.add('imageURL');
 
+        employeeImage.appendChild(imageElement);
 
-function displayEmployees(employees) {
-  const employeeList = document.getElementById('employee-list');
+        const employeeDetails = document.createElement('div');
+        employeeDetails.classList.add('employee-details');
 
-  employees.forEach(function(employee) {
-    const employeeCard = document.createElement('div');
-    employeeCard.classList.add('employee-card');
+        const heading = document.createElement('h2');
+        heading.textContent = 'Employee Information';
 
-    const employeeImage = document.createElement('div');
-    employeeImage.classList.add('employee-image');
+        const idParagraph = document.createElement('p');
+        idParagraph.innerHTML = `<label>Employee ID:</label> <span class="ID">${employee.ID}</span>`;
 
-    const imageElement = document.createElement('img');
-    imageElement.src = employee.imageURL;imageElement.alt = 'Employee Image'; imageElement.classList.add('imageURL');
+        const fullNameParagraph = document.createElement('p');
+        fullNameParagraph.innerHTML = `<label>Full Name:</label> <span class="Full Name">${employee.FullName}</span>`;
 
-    employeeImage.appendChild(imageElement);
+        const departmentParagraph = document.createElement('p');
+        departmentParagraph.innerHTML = `<label>Department:</label> <span class="department">${employee.Department}</span>`;
 
-    const employeeDetails = document.createElement('div');
-    employeeDetails.classList.add('employee-details');
+        const levelParagraph = document.createElement('p');
+        levelParagraph.innerHTML = `<label>Level:</label> <span class="level">${employee.Level}</span>`;
 
-    const heading = document.createElement('h2');
-    heading.textContent = 'Employee Information';
+        const salaryParagraph = document.createElement('p');
+        salaryParagraph.innerHTML = `<label>Salary:</label> <span class="salary">${employee.Salary}</span>`;
 
-    const idParagraph = document.createElement('p');
-    idParagraph.innerHTML = `<label>Employee ID:</label> <span class="ID">${employee.ID}</span>`;
+        employeeDetails.appendChild(heading);
+        employeeDetails.appendChild(idParagraph);
+        employeeDetails.appendChild(fullNameParagraph);
+        employeeDetails.appendChild(departmentParagraph);
+        employeeDetails.appendChild(levelParagraph);
+        employeeDetails.appendChild(salaryParagraph);
 
-    const fullNameParagraph = document.createElement('p');
-    fullNameParagraph.innerHTML = `<label>Full Name:</label> <span class="Full Name">${employee.FullName}</span>`;
+        employeeCard.appendChild(employeeImage);
+        employeeCard.appendChild(employeeDetails);
 
-    const departmentParagraph = document.createElement('p');
-    departmentParagraph.innerHTML = `<label>Department:</label> <span class="department">${employee.Department}</span>`;
+        employeeList.appendChild(employeeCard);
+      });
+    }
 
-    const levelParagraph = document.createElement('p');
-    levelParagraph.innerHTML = `<label>Level:</label> <span class="level">${employee.Level}</span>`;
+    // Call the function to display employee details
+    displayEmployees(employees);
 
-    const salaryParagraph = document.createElement('p');
-    salaryParagraph.innerHTML = `<label>Salary:</label> <span class="salary">${employee.Salary}</span>`;
+    class Employee {
+      constructor(imageURL, ID, FullName, Department, Level, Salary) {
+        this.imageURL = imageURL;
+        this.ID = ID;
+        this.FullName = FullName;
+        this.Department = Department;
+        this.Level = Level;
+        this.Salary = Salary;
+      }
 
-    employeeDetails.appendChild(heading);
-    employeeDetails.appendChild(idParagraph);
-    employeeDetails.appendChild(fullNameParagraph);
-    employeeDetails.appendChild(departmentParagraph);
-    employeeDetails.appendChild(levelParagraph);
-    employeeDetails.appendChild(salaryParagraph);
+      render() {
+        const divEl = document.createElement('div');
+        mainEl[0].appendChild(divEl);
 
-    employeeCard.appendChild(employeeImage);
-    employeeCard.appendChild(employeeDetails);
+        const imgEl = document.createElement('img');
+        imgEl.src = this.imageURL;
+        imgEl.alt = this.FullName;
 
-    employeeList.appendChild(employeeCard);
-  });
-}
+        divEl.appendChild(imgEl);
+        const pEl = document.createElement('p');
+        divEl.appendChild(pEl);
 
-// Call the function to display employee details
-displayEmployees(employees);
+        pEl.textContent = `Full Name : ${this.FullName} - ID : ${this.ID} Department : ${this.Department} - Level : ${this.Level} ${this.Salary}`;
+      }
+    }
 
+    const allEmployees = [
+      new Employee('./img/Ghazi.png', generateId(), 'Ghazi Samer', 'Administration', 'Senior', getRandomSalary('Senior')),
+      new Employee('./img/Lana.png', generateId(), 'Lana Ali', 'Finance', 'Senior', getRandomSalary('Senior')),
+      new Employee('./img/Tamara.png', generateId(), 'Tamara Ayoub', 'Marketing', 'Senior', getRandomSalary('Senior')),
+      new Employee('./img/Safi.png', generateId(), 'Safi Walid', 'Administration', 'Mid-Senior', getRandomSalary('Mid-Senior')),
+      new Employee('./img/Omar.png', generateId(), 'Omar Zaid', 'Development', 'Senior', getRandomSalary('Senior')),
+      new Employee('./img/Rana.png', generateId(), 'Rana Saleh', 'Development', 'Junior', getRandomSalary('Junior')),
+      new Employee('./img/Hadi.png', generateId(), 'Hadi Ahmad', 'Finance', 'Mid-Senior', getRandomSalary('Mid-Senior')),
+    ];
 
+    const mainEl = document.getElementsByClassName('main-content');
+
+    allEmployees.forEach((employee) => {
+      employee.render();
+    });
+
+    const employeeResults = document.getElementById('employee-results');
+    employeeResults.appendChild(employeeCard);

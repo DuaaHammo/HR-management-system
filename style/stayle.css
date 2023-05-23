@@ -33,7 +33,6 @@ header {
   width: 50px;
 }
 
-
 nav ul {
   display: flex;
   list-style-type: none;
@@ -88,6 +87,7 @@ footer {
   color: #393E46;
 }
 
+/* Font styles */
 body,
 h2,
 .info h3,
@@ -95,6 +95,8 @@ button[type="submit"],
 .footer-content a {
   font-family: 'Josefin Sans', sans-serif;
 }
+
+/* Employee Card styles */
 .employee-card {
   max-width: 400px;
   margin: 0 auto;
@@ -108,12 +110,12 @@ button[type="submit"],
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .employee-card:hover {
-  box-shadow: 0px 0px 10px rgba(25, 23, 80, 0.305);
+  box-shadow: 0px 0px 10px rgba(19, 17, 71, 0.305);
 }
-
 
 .employee-image {
   margin-bottom: 20px;

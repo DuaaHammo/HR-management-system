@@ -3,7 +3,7 @@
 ## Overview
 The HR Management System is a web-based application designed to help companies manage their employees effectively. It provides a platform to organize employee information and allows for easy filtering and retrieval of data.
 
-## Features## Features
+## Features
 - **Employee Information:** The system allows users to store and manage essential employee details such as employee ID, full name, department, level, image URL, and salary.
 - **Employee Listing:** Users can view a list of all employees along with their respective salaries. The list is dynamically generated and can be sorted based on different criteria.
 - **Unique Employee ID:** The system generates a unique four-digit employee ID for each new employee added to the system.

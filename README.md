@@ -1,9 +1,9 @@
 # HR-management-system
 
-##Overview
+## Overview
 The HR Management System is a web-based application designed to help companies manage their employees effectively. It provides a platform to organize employee information and allows for easy filtering and retrieval of data.
 
-##Features## Features
+## Features## Features
 - **Employee Information:** The system allows users to store and manage essential employee details such as employee ID, full name, department, level, image URL, and salary.
 - **Employee Listing:** Users can view a list of all employees along with their respective salaries. The list is dynamically generated and can be sorted based on different criteria.
 - **Unique Employee ID:** The system generates a unique four-digit employee ID for each new employee added to the system.
@@ -13,28 +13,27 @@ The HR Management System is a web-based application designed to help companies m
 - **Social Media Integration:** The footer section includes links to the company's social media profiles, allowing users to connect and engage with the organization.
 
 
-____________________________
-##Technologies Used
-..*HTML
-..*CSS
-..*JavaScript
-..*Git and GitHub
 
-__________________________
-##Getting Started
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Git and GitHub
+
+
+
+## Getting Started
+
 To run the HR Management System locally on your machine, follow these steps:
-
 1.Clone the repository.
 2.Open the project in your preferred code editor.
 3.Navigate to the project directory and open the index.html file in a web browser.
-___________________________
 
-##Contributions
+## Contributions
 Contributions to the HR Management System project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
 
-__________
+## Contributions
+Contributions to the HR Management System project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
 
-##License
-This project is licensed under the MIT License.
 
-Feel free to customize and enhance this README to provide more specific details about your HR Management System project.
+

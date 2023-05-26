@@ -21,13 +21,11 @@ The HR Management System is a web-based application designed to help companies m
 - Git and GitHub
 
 
-
 ## Getting Started
-
 To run the HR Management System locally on your machine, follow these steps:
-1.Clone the repository.
-2.Open the project in your preferred code editor.
-3.Navigate to the project directory and open the index.html file in a web browser.
+1. Clone the repository.
+2. Open the project in your preferred code editor.
+3. Navigate to the project directory and open the `index.html` file in a web browser.
 
 ## Contributions
 Contributions to the HR Management System project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.

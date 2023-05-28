@@ -84,37 +84,44 @@ Employee.prototype.render = function () {
     mainEl[0].appendChild(divParentEl)
 
     const divEl = document.createElement("div")
-    divEl.className= "imgURL"
+    divEl.className = "imgURL"
     divParentEl.appendChild(divEl)
 
 
-    //RENDER CARD FINALLY__________________________________________________________________________________
+    //RENDER CARD FINALLY
 
-    //imgURL__________________________________________________________________________________________________
+    //imgURL
     let imgEl = document.createElement("img");
-
+    var image = document.querySelector('.img');
     imgEl.src = this.imgURL;
     imgEl.alt = this.imgURL;
-
     divEl.appendChild(imgEl)
+    imgEl.style.borderRadius = "50%";
+    imgEl.style.width = '50%';
+    imgEl.style.height = '50%';
 
+    //fullName
     let hEl = document.createElement("h2");
-    hEl.id= "employee-name";
+    hEl.id = "employee-name";
     hEl.textContent = `${this.fullName}`;
     divEl.appendChild(hEl)
 
+    //employeeID
     let pEl = document.createElement("p");
     pEl.textContent = `Employee ID: ${this.employeeID}\n\n`;
     divEl.appendChild(pEl);
 
+    //department
     pEl = document.createElement("p");
     pEl.textContent = `Department: ${this.department}\n\n`;
     divEl.appendChild(pEl);
 
+    //level
     pEl = document.createElement("p");
     pEl.textContent = `Level: ${this.level}\n\n`;
     divEl.appendChild(pEl);
 
+    //salary
     pEl = document.createElement("p");
     pEl.textContent = `Salary: ${this.salary}`;
     divEl.appendChild(pEl);

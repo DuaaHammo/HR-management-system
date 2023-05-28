@@ -62,7 +62,7 @@ nav ul li:hover {
   flex: 1;
 }
 
-/* Footer styles */
+Footer styles
 footer {
   display: flex;
   align-items: center;
@@ -87,72 +87,4 @@ footer {
   color: #f2f2f2; 
 }
 
-/* Font styles */
-body,
-h2,
-.info h3,
-button[type="submit"],
-.footer-content a {
-  font-family: 'Josefin Sans', sans-serif;
-}
-/* Employee Card styles */
-.employee-card {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f2f2f2;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  /* Center the card */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 0px rgba(19, 17, 71, 0.305);
-  transition: box-shadow 0.3s ease-in-out;
-}
 
-.employee-card:hover {
-  box-shadow: 0px 0px 10px rgba(19, 17, 71, 0.305);
-}
-
-.employee-image {
-  margin-bottom: 20px;
-}
-
-.rounded-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.rounded-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.employee-details {
-  color: #393E46;
-}
-
-.employee-details h2 {
-  margin-bottom: 10px;
-}
-
-.employee-details p {
-  margin-bottom: 10px;
-}
-
-.employee-details label {
-  display: inline-block;
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-.employee-details span {
-  font-weight: normal;
-}

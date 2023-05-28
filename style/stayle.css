@@ -215,15 +215,17 @@ body {
   transition: opacity 0.5s;
   animation: spin 2.5s linear infinite;
  font-size: 14px;
-}  
+} 
+ 
 /* Footer styles */
+
 footer {
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* background-color: #11131e; */
-  /* padding: 100px; */
-  /* text-align: center; */
+  /* padding: px; */
+  text-align: center;
   color: #f2f2f2; 
   
 }

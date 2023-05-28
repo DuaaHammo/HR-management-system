@@ -26,7 +26,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #393E46; /* تغيير اللون إلى #393E46 */
+  background-color: #393E46; 
 }
 
 .logo img {
@@ -44,7 +44,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #f2f2f2; /* تغيير اللون إلى #f2f2f2 */
+  color: #f2f2f2;
   font-weight: bold;
 }
 

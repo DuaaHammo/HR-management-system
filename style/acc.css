@@ -62,7 +62,7 @@ nav ul li:hover {
   flex: 1;
 }
 
-Footer styles
+/* Footer styles */
 footer {
   display: flex;
   align-items: center;

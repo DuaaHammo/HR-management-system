@@ -18,7 +18,7 @@ header {
   padding: 20px;
   max-width: 1729px ;
   margin: 0 auto;
-  font-size: 30px;
+  font-size: var(--font-size);
 }
 
 .logo {
@@ -81,7 +81,7 @@ nav ul li a:hover::before {
   transform: scaleX(1);
 }
 nav ul li a {
-  font-size: 30px; 
+  font-size: 20px; 
 }
 /* Main content */
 .main-content {
@@ -229,7 +229,7 @@ footer {
   justify-content: center;
   text-align: center;
   color: #f2f2f2; 
- 
+  font-size: 20px;
 }
 
 .footer {
@@ -241,7 +241,7 @@ footer {
   text-decoration: none;
   font-weight: bold;
   flex: wrap;
-  font-size: 20px; 
+  
 }
 
 .footer-content a:hover  {

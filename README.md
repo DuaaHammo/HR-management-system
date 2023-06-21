@@ -1,4 +1,5 @@
 
+
 # HR-management-system
 
 ## Overview
@@ -30,4 +31,11 @@ To run the HR Management System locally on your machine, follow these steps:
 
 ## Contributions
 Contributions to the HR Management System project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
+
+
+## Contributions
+Contributions to the HR Management System project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
+
+
+
 
